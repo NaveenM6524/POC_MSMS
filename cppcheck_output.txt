@@ -1,0 +1,60 @@
+Checking auth.c ...
+1/8 files checked 13% done
+Checking distribution.c ...
+distribution.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+2/8 files checked 21% done
+Checking inventory.c ...
+inventory.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+inventory.c:153:24: style: Variable 'cur' can be declared as pointer to const [constVariablePointer]
+        for (Medicine *cur = table[i]; cur; cur = cur->next) {
+                       ^
+3/8 files checked 42% done
+Checking logging.c ...
+4/8 files checked 43% done
+Checking main.c ...
+main.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+5/8 files checked 71% done
+Checking reports.c ...
+reports.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+reports.c:138:24: style: The scope of the variable 'statusNames' can be reduced. [variableScope]
+    static const char *statusNames[] = { "FULFILLED", "PARTIAL", "REJECTED" };
+                       ^
+6/8 files checked 86% done
+Checking supply.c ...
+supply.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+supply.c:66:15: style: Variable 'existing' can be declared as pointer to const [constVariablePointer]
+    Medicine *existing = inventoryFindExact(medicineName, batch, normalizedExpiry);
+              ^
+7/8 files checked 93% done
+Checking util.c ...
+util.c:106:16: style: Variable 'tmNow' can be declared as pointer to const [constVariablePointer]
+    struct tm *tmNow = localtime(&now);
+               ^
+util.c:113:16: style: Variable 'tmNow' can be declared as pointer to const [constVariablePointer]
+    struct tm *tmNow = localtime(&now);
+               ^
+8/8 files checked 100% done
+inventory.c:95:11: style: The function 'inventoryFindById' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+Medicine *inventoryFindById(int id)
+          ^
+inventory.c:143:10: style: The function 'inventorySave' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+OpStatus inventorySave(void)
+         ^
+util.c:39:5: style: The function 'isLeapYear' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+int isLeapYear(int year)
+    ^
+util.c:44:5: style: The function 'daysInMonth' should have static linkage since it is not used outside of its translation unit. [staticFunction]
+int daysInMonth(int month, int year)
+    ^
+nofile:0:0: information: Active checkers: 119/186 (use --checkers-report=<filename> to see details) [checkersReport]
+
