@@ -1,6 +1,0 @@
-==32021== Memcheck, a memory error detector
-==32021== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
-==32021== Using Valgrind-3.25.1 and LibVEX; rerun with -h for copyright info
-==32021== Command: ./msms
-==32021== 
-==32021== error writing 48 bytes to shared mem /tmp/vgdb-pipe-shared-mem-vgdb-32021-by-naveenc-on-???
